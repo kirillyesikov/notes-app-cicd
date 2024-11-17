@@ -17,7 +17,7 @@ service:
                             paths:
                                 - kirillyesikov/notes-app-cicd/deployment.yaml
                                 - kirillyesikov/notes-app-cicd/service.yaml
-                            repoName: harnesscd-example-apps
+                            repoName: notes-app-cicd 
                             branch: master
                         skipResourceVersioning: false
                         enableDeclarativeRollback: false
