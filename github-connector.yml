@@ -6,13 +6,13 @@ connector:
   projectIdentifier: default_project
   type: Github
   spec:
-    url: https://github.com/GITHUB_USERNAME/notes-app-cicd
+    url: https://github.com/kirillyesikov/notes-app-cicd
     authentication:
       type: Http
       spec:
         type: UsernameToken
         spec:
-          username: GITHUB_USERNAME
+          username: kirillyesikov
           tokenRef: ProxmoXtoken
     apiAccess:
       type: Token
