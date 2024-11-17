@@ -6,7 +6,7 @@ service:
         spec:
             manifests:
                 - manifest:
-                    identifier: guestbook
+                    identifier: notes-app-cicd
                     type: K8sManifest
                     spec:
                       store:
@@ -15,8 +15,8 @@ service:
                             connectorRef: harnessgitconnector
                             gitFetchType: Branch
                             paths:
-                                - kirillyesikov/notes-app-cicd/deployment.yaml
-                                - kirillyesikov/notes-app-cicd/service.yaml
+                                - deployment.yaml
+                                - service.yaml
                             repoName: notes-app-cicd 
                             branch: master
                         skipResourceVersioning: false
