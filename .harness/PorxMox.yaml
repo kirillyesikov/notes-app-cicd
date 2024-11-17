@@ -1,0 +1,6 @@
+environment:
+  name: PorxMox
+  identifier: PorxMox
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  type: PreProduction
