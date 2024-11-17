@@ -6,7 +6,7 @@ connector:
   projectIdentifier: default_project
   type: Github
   spec:
-    url: https://github.com/GITHUB_USERNAME/harnesscd-example-apps
+    url: https://github.com/GITHUB_USERNAME/notes-app-cicd
     authentication:
       type: Http
       spec:
