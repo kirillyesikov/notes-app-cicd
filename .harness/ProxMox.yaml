@@ -1,0 +1,23 @@
+service:
+  name: ProxMox
+  identifier: ProxMox
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: pipelinestagesMyPipelinespecserviceConfigserviceDefinitionspecmanifestsdeploymentspecstorespecbranch
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: Kirill
+                  gitFetchType: Branch
+                  paths:
+                    - notes-app-cicd/github-connector.yml
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+    type: Kubernetes
