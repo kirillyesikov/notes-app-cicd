@@ -13,10 +13,10 @@ connector:
         type: UsernameToken
         spec:
           username: GITHUB_USERNAME
-          tokenRef: harness_gitpat
+          tokenRef: ProxmoXtoken
     apiAccess:
       type: Token
       spec:
-        tokenRef: harness_gitpat
+        tokenRef: ProxmoXtoken
     executeOnDelegate: false
     type: Repo
