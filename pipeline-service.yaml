@@ -1,0 +1,24 @@
+service:
+    name: harness_guestbook
+    identifier: harnessguestbook
+    serviceDefinition:
+        type: Kubernetes
+        spec:
+            manifests:
+                - manifest:
+                    identifier: guestbook
+                    type: K8sManifest
+                    spec:
+                      store:
+                        type: Github
+                        spec:
+                            connectorRef: harnessgitconnector
+                            gitFetchType: Branch
+                            paths:
+                                - kirillyesikov/notes-app-cicd/deployment.yaml
+                                - kirillyesikov/notes-app-cicd/service.yaml
+                            repoName: harnesscd-example-apps
+                            branch: master
+                        skipResourceVersioning: false
+                        enableDeclarativeRollback: false
+    gitOpsEnabled: false
