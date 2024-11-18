@@ -5,5 +5,5 @@ environment:
   tags: {}
   type: PreProduction
   orgIdentifier: default
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   variables: []
