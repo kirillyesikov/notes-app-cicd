@@ -7,7 +7,7 @@ service:
     spec:
       manifests:
         - manifest:
-            identifier: pipelinestagesMyPipelinespecserviceConfigserviceDefinitionspecmanifestsdeploymentspecstorespecbranch
+            identifier: service
             type: K8sManifest
             spec:
               store:
@@ -20,4 +20,15 @@ service:
                   branch: main
               skipResourceVersioning: false
               enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: Docker
+                imagePath: kyesikov/notes-app
+                tag: <+input>
+                digest: ""
+              identifier: Artifact
+              type: DockerRegistry
     type: Kubernetes
