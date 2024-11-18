@@ -15,10 +15,10 @@ service:
                             connectorRef: harnessgitconnector
                             gitFetchType: Branch
                             paths:
-                                - guestbook/guestbook-ui-deployment.yaml
-                                - guestbook/guestbook-ui-svc.yaml
-                            repoName: harnesscd-example-apps
-                            branch: master
+                                - notes-app-cicd/deployment.yaml
+                                - notes-app-cicd/service.yaml
+                            repoName: notes-app-cicd
+                            branch: main
                         skipResourceVersioning: false
                         enableDeclarativeRollback: false
     gitOpsEnabled: false
