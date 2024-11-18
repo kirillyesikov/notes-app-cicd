@@ -15,8 +15,8 @@ service:
                             connectorRef: harnessgitconnector
                             gitFetchType: Branch
                             paths:
-                                - notes-app-cicd/deployment.yaml
-                                - notes-app-cicd/service.yaml
+                                - deployment.yaml
+                                - service.yaml
                             repoName: notes-app-cicd
                             branch: main
                         skipResourceVersioning: false
