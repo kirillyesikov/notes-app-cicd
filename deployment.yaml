@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notes-app-deployment
+  name: notes-app
   labels:
     app: notes-app
 spec:
