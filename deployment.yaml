@@ -15,7 +15,7 @@ spec:
         app: notes-app
     spec:
       containers:
-      - name: notes-app-deployment
+      - name: notes-app
         image: pavansa/notes-app
         resources:
           requests:
@@ -23,3 +23,27 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
+
+
+
+
+        apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        name: guestbook-ui
+        ports:
+        - containerPort: 80
